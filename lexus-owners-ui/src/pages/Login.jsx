@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://localhost:4000";
+const API = "https://lexus-owners-backend.onrender.com";
 
 export default function Login() {
     const [phone, setPhone] = useState("");
@@ -93,4 +93,5 @@ export default function Login() {
             </div>
         </div>
     );
+
 }
