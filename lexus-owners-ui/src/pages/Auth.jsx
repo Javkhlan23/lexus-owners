@@ -14,7 +14,7 @@ export default function Auth() {
   const checkPhone = async () => {
     setError("");
     const res = await fetch(
-      `http://localhost:4000/check-phone?phone=${fullPhone}`
+      `https://lexus-owners-backend.onrender.com/check-phone?phone=${fullPhone}`
     );
     const data = await res.json();
 
@@ -24,7 +24,7 @@ export default function Auth() {
     }
 
     await fetch(
-      `http://localhost:4000/send-otp?phone=${fullPhone}`
+      `https://lexus-owners-backend.onrender.com/send-otp?phone=${fullPhone}`
     );
 
     setStep(2);
@@ -33,7 +33,7 @@ export default function Auth() {
   // 2️⃣ OTP шалгах
   const verifyOtp = async () => {
     const res = await fetch(
-      `http://localhost:4000/verify-otp?phone=${fullPhone}&otp=${otp}`
+      `https://lexus-owners-backend.onrender.com/verify-otp?phone=${fullPhone}&otp=${otp}`
     );
     const data = await res.json();
 
@@ -78,3 +78,4 @@ export default function Auth() {
     </div>
   );
 }
+
